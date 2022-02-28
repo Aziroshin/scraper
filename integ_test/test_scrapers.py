@@ -6,6 +6,7 @@ import utils.dynamo
 from scrapers.hungary_hu import HungaryScraper
 from scrapers.moldova_ro import MoldovaScraper
 from scrapers.poland import PolandScraper
+from scrapers.slovakia_sk import SlovakiaScraper
 
 @pytest.fixture(autouse=True)
 def put_item():
@@ -546,3 +547,8 @@ def test_scrape_moldova_ro(put_item, check_common):
                             'name': 'Copciac-Cervonoarmeiskoe',
                             'qr': ''}]
                           
+def test_scrape_slovakia_sk(put_item, check_common):
+    slovakia_scraper = SlovakiaScraper()
+    slovakia_scraper.scrape()
+    item, general, reception = check_common('slovakia-sk')
+    # assert len(general) >= 30
