@@ -13,6 +13,7 @@ from utils.utils import get_reception_points, get_website_content, normalize
 
 SLOVAKIA_POINTS_URL = "https://www.minv.sk/?hranicne-priechody-1"
 
+# WARNING: These checkpoints all contain `Chop` (refer to https://github.com/Ukraine-Relief-Efforts/scraper/issues/10)
 # TODO: The placemarker bubble contents in the following two KML files are broken (at least on google maps)
 # This file is "v1" and is structured differently from `HUNGARY_KML`.
 # SLOVAKIA_KML = "https://www.google.com/maps/d/kml?forcekml=1&mid=10XSF6CAHYmRA7htR2j-7YxGNmHwLuf1m"
